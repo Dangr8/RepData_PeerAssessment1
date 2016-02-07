@@ -22,7 +22,7 @@ Make a histogram of the total number of steps taken each day
 hist(total_steps$steps, main = "Total Daily Steps", xlab = "Steps Taken")
 ```
 
-![](sample_files/figure-html/unnamed-chunk-3-1.png)
+![](figure/unnamed-chunk-3-1.png)
 
 Calculate and report the **mean** and **median** total number of steps taken 
 per day 
@@ -59,7 +59,7 @@ steps_interval<-aggregate(steps~interval,data=activity,mean,na.rm=TRUE)
 plot(steps~interval,data=steps_interval,type="l")
 ```
 
-![](sample_files/figure-html/unnamed-chunk-5-1.png)
+![](figure/unnamed-chunk-5-1.png)
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps? 
 
@@ -125,7 +125,7 @@ total_steps2<-aggregate(steps~date,data=activity_filled,sum)
 hist(total_steps2$steps, main = "Imputed Total Steps", xlab = "Total Steps")
 ```
 
-![](sample_files/figure-html/unnamed-chunk-10-1.png)
+![](figure/unnamed-chunk-10-1.png)
 
 ```r
 mean(total_steps2$steps)
@@ -172,4 +172,4 @@ library(lattice)
 xyplot(steps~interval|factor(day),data=steps_interval2,aspect=1/2,type="l")
 ```
 
-![](sample_files/figure-html/unnamed-chunk-12-1.png)
+![](figure/unnamed-chunk-12-1.png)
